@@ -6,6 +6,7 @@ import time
 import datetime
 import queue
 import camera_func
+import Startup
 
 def implement():
 	if not os.path.exists(r'D:\Underwater_Video'):
@@ -19,14 +20,15 @@ def implement():
 	os.mkdir(today_frame)
 	i = 1
 	while True:
-		if not func.OpenCamera():
+		if not camera_func.OpenCamera():
 			break
-		filename = func.Video(today_video, i)
-		func.frame(filename, today_frame, i)
+		filename = camera_func.Video(today_video, i)
+		camera_func.frame(filename, today_frame, i)
 		i = i + 1
 
 if __name__ == '__main__':  # the main of the program
-    Implement = threading.Thread(target=implement, daemon=True)  # create a new thread
-    Implement.start()
-    Implement.join()
-    print("\n Finished the task!  \n")
+	Startup.Startup()											# 启动OTech
+	Implement = threading.Thread(target=implement, daemon=True)  # create a new thread
+	Implement.start()
+	Implement.join()
+	print("\n Finished the task!  \n")
