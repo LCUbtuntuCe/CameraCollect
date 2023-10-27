@@ -13,14 +13,14 @@ frame_s = 0
 def OpenCamera():
     global size
     global frame_s
-    print('\ncapture video about 10 minutes\n')
+    print('\ncapture video about 2 minutes\n')
     camera_path = 'rtsp://admin:123456@192.168.1.2/h264/ch1/sub/av_stream'  # 摄像头链接
     cap = cv2.VideoCapture(camera_path)
     if not cap.isOpened:
         return False
     size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))    # 确定帧的大小
     frame_s = cap.get(cv2.CAP_PROP_FPS)                                                         # Using this camera, how many frames in every second.
-    time_frame = frame_s * 60 * 10                                                              # 设置保存时间为10分钟一保存
+    time_frame = frame_s * 60 * 2                                                              # 设置保存时间为10分钟一保存
     num = 0
     ret, frame = cap.read()
     while ret:
@@ -33,6 +33,7 @@ def OpenCamera():
     return True
 
 def Video(today_video, i):
+    print("\nStart to produce a new video\n")
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')    # 确定格式
     filename = today_video + '\\' + str(i) + ".mp4" #保存的视频文件
     video_writer = cv2.VideoWriter(filename, fourcc, frame_s, size, True)

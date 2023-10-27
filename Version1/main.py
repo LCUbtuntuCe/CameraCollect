@@ -5,7 +5,7 @@ import os
 import time
 import datetime
 import queue
-import func
+import camera_func
 
 def implement():
 	if not os.path.exists(r'D:\Underwater_Video'):
