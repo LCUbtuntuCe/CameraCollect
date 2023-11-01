@@ -6,7 +6,6 @@ import time
 import datetime
 import queue
 import camera_func
-import Startup
 
 def implement():
 	if not os.path.exists(r'D:\Underwater_Video'):
@@ -27,7 +26,7 @@ def implement():
 		i = i + 1
 
 if __name__ == '__main__':  # the main of the program
-	Startup.Startup()											# 启动OTech
+	os.startfile("C:\\Program Files (x86)\\OceanTech\\OceanTechSideScanSonarPro\\x86\\OceanTechSideScanSonarPro.exe")
 	Implement = threading.Thread(target=implement, daemon=True)  # create a new thread
 	Implement.start()
 	Implement.join()
