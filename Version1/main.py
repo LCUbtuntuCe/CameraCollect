@@ -1,33 +1,10 @@
-import cv2
-import numpy as np
-import threading
-import os
-import time
-import datetime
-import queue
+import sys
 import camera_func
-
-def implement():
-	if not os.path.exists(r'D:\Underwater_Video'):
-		os.makedirs(r'D:\Underwater_Video')
-	if not os.path.exists(r'D:\Underwater_Frame'):
-		os.makedirs(r'D:\Underwater_Frame')
-	today = str(datetime.date.today())      # 获取今天的日期并转换成字符串
-	today_video = r'D:\Underwater_Video' + '\\' + today        # 存放今天的录像
-	today_frame = r'D:\Underwater_Frame' + '\\' + today         # 存放今天的取帧图片
-	os.mkdir(today_video)
-	os.mkdir(today_frame)
-	i = 1
-	while True:
-		if not camera_func.OpenCamera():
-			break
-		filename = camera_func.Video(today_video, i)
-		camera_func.frame(filename, today_frame, i)
-		i = i + 1
+import os
 
 if __name__ == '__main__':  # the main of the program
-	os.startfile("C:\\Program Files (x86)\\OceanTech\\OceanTechSideScanSonarPro\\x86\\OceanTechSideScanSonarPro.exe")
-	Implement = threading.Thread(target=implement, daemon=True)  # create a new thread
-	Implement.start()
-	Implement.join()
-	print("\n Finished the task!  \n")
+    os.startfile("C:\\Program Files (x86)\\OceanTech\\OceanTechSideScanSonarPro\\x86\\OceanTechSideScanSonarPro.exe")
+    sys.setswitchinterval(0.001)
+    P = camera_func.Camera()
+    P.opencamera.join()
+    P.video.join()

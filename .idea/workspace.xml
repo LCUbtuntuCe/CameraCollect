@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a1ab515-9baf-49ec-81ef-4b967f6f5311" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Version1/Startup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Version1/camera_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/Version1/camera_func.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Version1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Version1/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +41,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
